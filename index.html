@@ -59,12 +59,13 @@ p {
 
 <p><h1>Click the button to get your Reigon.</h1></p>
 <center>
-<button class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
+<button  class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
 </center>
-<p id="demo"></p>
+<p id="text"></p>
 
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("text");
+	var y = "You are at a very high risk of an earthquake be prepared!!!!!!";
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -87,6 +88,7 @@ else{
 else{
  x.innerHTML +=" Central India"	;
 }}
+	x+=y;
 </script>
 
 </body>
