@@ -60,19 +60,32 @@ p {
 <p><h1>Click the button to get your Reigon.</h1></p>
 <center>
 <button class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
+	
 </center>
 <p id="demo"></p>
-
+	<div id = "a" style="display:none;">
+	<p><h1>Whant to be safe????.</h1></p>
+<button class = "button" onclick="getLocation()"><h3><span>Try me</span></h3></button>
+</div>
 <script>
 var x = document.getElementById("demo");
 
 function getLocation() {
+	toggle_visibility('a');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+	function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+
 
 function showPosition(position) {
 	if(position.coords.latitude>26||position.coords.latitude<21){
@@ -90,7 +103,7 @@ else{
 
 	if(x.innerHTML==" Northern India"){
 	
-	x.innerHTML += "";}
+	x.innerHTML += "An earthquake might hit you anytime!!!";}
 }
 </script>
 
