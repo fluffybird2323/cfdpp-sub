@@ -76,16 +76,16 @@ function getLocation() {
 
 function showPosition(position) {
 	if(position.coords.latitude>26||position.coords.latitude<21){
-    x.innerHTML +=(position.coords.latitude>26)?("North"):("South")   ;
+    x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
     	if(position.coords.longitude>85||position.coords.longitude<74){
-    x.innerHTML +=(position.coords.latitude>85)?("Eastern India"):("Western India")   ;
+    x.innerHTML +=(position.coords.latitude>85)?(" Eastern India"):(" Western India")   ;
 }
 else{
 	x.innerHTML += "ern India";
 }
 }
 else{
- x.innerHTML +="Central India"	;
+ x.innerHTML +=" Central India"	;
 }}
 </script>
 
