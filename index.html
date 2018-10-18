@@ -1,6 +1,6 @@
 <html>
-	<head><style>
-		body {
+    <head><style>
+        body {
     background-color: lightblue;
 }
 h1 {
@@ -10,11 +10,11 @@ h1 {
 p {
     font-family: verdana;
     font-size: 26px;
-	text-align: center;
+    text-align: center;
 }
-		button {
-			background-color: #64EDC6;
-			 border: none;
+        button {
+            background-color: #64EDC6;
+             border: none;
                           color: white;
                           padding: 15px 32px;
                             text-align: center;
@@ -23,10 +23,10 @@ p {
                               font-size: 16px;
                                 margin: 4px 2px;
                                 cursor: pointer;
-			border-radius: 8px;
-			display: block;
-		}
-		
+            border-radius: 8px;
+            display: block;
+        }
+        
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -49,25 +49,25 @@ p {
   right: 0;
 }
 </style>
-	</head>
+    </head>
 <body >
 
 <p><h1>Click the button to get your Reigon.</h1></p>
 <center>
 <button class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
-	
+    
 
 <p id="demo"></p>
-	<div id = "a" style="display:none;">
-	<p><h1>Whant to be safe????.</h1></p>
+    <div id = "a" style="display:none;">
+    <p><h1>Whant to be safe????.</h1></p>
 <button class = "button" onclick="openwin()"><h3><span>Click here</span></h3></button>
 </div>
-	</center>
+    </center>
 <script>
 var x = document.getElementById("demo");
-	var reigoncode = 0;
+    var reigoncode ;
 function getLocation() {
-	toggle_visibility('a');
+    toggle_visibility('a');
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -75,7 +75,7 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
-	function toggle_visibility(id) {
+    function toggle_visibility(id) {
        var e = document.getElementById(id);
        if(e.style.display == 'block')
           e.style.display = 'none';
@@ -83,51 +83,65 @@ function getLocation() {
           e.style.display = 'block';
    }
 function showPosition(position) {
-	if(position.coords.latitude>26||position.coords.latitude<21){
+    if(position.coords.latitude>26||position.coords.latitude<21){
     x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
-    	if(position.coords.longitude>85||position.coords.longitude<74){
+        if(position.coords.longitude>85||position.coords.longitude<74){
     x.innerHTML +=(position.coords.latitude>85)?(" Eastern India"):(" Western India")   ;
 }
 else{
-	x.innerHTML += "ern India";
+    x.innerHTML += "ern India";
 }
 }
 else{
- x.innerHTML +=" Central India"	;
+ x.innerHTML +=" Central India" ;
 }
-setcode();
- navigator.geolocation.getCurrentPosition(getDis);	
+reigoncode = setcode();
+ navigator.geolocation.getCurrentPosition(getDis);  
 }
-	function setcode(){
-		if(x.innerHTML==" Northern India")
-			return 1;
-		else if(x.innerHTML==" North Eastern India")
-			return 2;
-		else if(x.innerHTML==" North Western India")
-			return 0;
-		else if(x.innerHTML==" Central India")
-			return 3;
-		else if(x.innerHTML==" South Western India")
-			return 4;
-		else if(x.innerHTML==" South India")
-			return 5;
-		else if(x.innerHTML==" South Eastern India")
-			return 6;
-	alert(reigoncode);
-	}
-	function getDis(position){
-	if(x.innerHTML==" Northern India" && !(151*(position.coords.latitude)+125*(position.coords.longitude)-14273)>0 ){
-	
-	x.innerHTML += ": your life is under a constant threat from earthquakes, landslides and floods!!!!";}
+    function setcode(){
+var code;
+        if(x.innerHTML==" Northern India"){
+            code = 1;
+return code;}
+        else if(x.innerHTML==" North Eastern India"){
+            code = 2;
+return code;}
+        else if(x.innerHTML==" North Western India"){
+            code = 0;
+return code;}
+        else if(x.innerHTML==" Central India"){
+            code = 3;
+return code;}
+        else if(x.innerHTML==" South Western India"){
+            code = 4;
+return code;}
+        else if(x.innerHTML==" South India"){
+            code = 5;
+return code;}
+        else if(x.innerHTML==" South Eastern India"){
+            code = 6;
+return code;}
+           
+    }
+    function getDis(position){
+    if(x.innerHTML==" Northern India" && !(151*(position.coords.latitude)+125*(position.coords.longitude)-14273)>0 ){
+    
+    x.innerHTML += ": your life is under a constant threat from earthquakes, landslides and floods!!!!";
+reigoncode = 7;}
 else if(x.innerHTML==" Northern India"){
 
-	 x.innerHTML+=": your life is under a constant threat from earthquakes and floods!!!!";}	
+     x.innerHTML+=": your life is under a constant threat from earthquakes and floods!!!!";}    
 else if(x.innerHTML==" North Eastern India"){
-	 x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}
-	else if(x.innerHTML==" South Eastern India"){
-	x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";}
-	}
-	
+     x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}
+    else if(x.innerHTML==" South Eastern India"){
+    x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";}
+    }
+    function openwin(){
+    if(reigoncode == "1")
+    window.open("http://www.google.com/");
+    else
+alert(reigoncode);
+    }
 </script>
 
 </body>
