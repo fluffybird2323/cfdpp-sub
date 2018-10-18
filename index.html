@@ -95,7 +95,8 @@ else{
 else{
  x.innerHTML +=" Central India"	;
 }
-	getDis;
+setcode();
+ navigator.geolocation.getCurrentPosition(getDis);	
 }
 	function setcode(){
 		if(x.innerHTML==" Northern India")
@@ -115,12 +116,13 @@ else{
 	alert(reigoncode);
 	}
 	function getDis(position){
-	if(x.innerHTML==" Northern India" && (151*(position.coords.latitude)+125*(position.coords.longitude)-14273)>0 ){
+	if(x.innerHTML==" Northern India" && !(151*(position.coords.latitude)+125*(position.coords.longitude)-14273)>0 ){
 	
-	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
-	else if(x.innerHTML==" Northern India"){
-	 x.innerHTML+=": your life is under a constant threat from earthquakes and floods!!!!";}
-		else if(x.innerHTML==" North Eastern India"){
+	x.innerHTML += ": your life is under a constant threat from earthquakes, landslides and floods!!!!";}
+else if(x.innerHTML==" Northern India"){
+
+	 x.innerHTML+=": your life is under a constant threat from earthquakes and floods!!!!";}	
+else if(x.innerHTML==" North Eastern India"){
 	 x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}
 	else if(x.innerHTML==" South Eastern India"){
 	x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";}
