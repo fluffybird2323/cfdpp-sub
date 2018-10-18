@@ -67,13 +67,13 @@ p {
 	<div id = "a" style="display:none;">
 	<p><h1>Want to be safe????.</h1></p>
 	<a href = "https://www.wikihow.com/React-During-an-Earthquake">
-<button class = "button" ><h3><span>Click here</span></h3></button>
+<button onclick="open_win()" class = "button" ><h3><span>Click here</span></h3></button>
 	</a>
 </div>
 	</center>
 <script>
 var x = document.getElementById("demo");
-
+var reigoncode;
 function getLocation() {
 	toggle_visibility('a');
     if (navigator.geolocation) {
@@ -103,11 +103,13 @@ else{
 }
 else{
  x.innerHTML +=" Central India"	;
-}
-
+}}
+function open_win(){
 	if(x.innerHTML==" Northern India"){
-	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
+
+	    window.open("https://www.wikihow.com/Survive-an-Earthquake");
+    window.open("https://www.wikihow.com/Survive-a-Flood");
 }
 </script>
 
