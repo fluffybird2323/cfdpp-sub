@@ -66,11 +66,14 @@ p {
 	
 	<div id = "a" style="display:none;">
 	<p><h1>Want to be safe????.</h1></p>
-<button onclick="open_win()" class = "button" ><h3><span>Click here</span></h3></button>
+	<a href = "https://www.wikihow.com/React-During-an-Earthquake">
+<button class = "button" ><h3><span>Click here</span></h3></button>
+	</a>
 </div>
 	</center>
 <script>
 var x = document.getElementById("demo");
+
 function getLocation() {
 	toggle_visibility('a');
     if (navigator.geolocation) {
@@ -87,7 +90,7 @@ function getLocation() {
           e.style.display = 'block';
    }
 
-
+//by rohit
 function showPosition(position) {
 	if(position.coords.latitude>26||position.coords.latitude<21){
     x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
@@ -101,16 +104,15 @@ else{
 else{
  x.innerHTML +=" Central India"	;
 }
-if(x.innerHTML==" Northern India"){
+
+	if(x.innerHTML==" Northern India"){
+	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
 }
-function open_win(){
-	if(x.innerHTML==" Northern India"){
+	if(x.innerHTML=="North Eastern"){
+	 x.innerHTML+=":yor life is under a constant threat from earthquakes,flood and landslide!!!!";}
+	}	
 
-	    window.open("https://www.wikihow.com/Survive-an-Earthquake")
-    window.open("https://www.wikihow.com/Survive-a-Flood")
-}
-</script>
-
-</body>
+	if(x.innerHTML=="south eastern"){
+	x.innerHTML+=":your life is under a constant threat from cyclone and flood!!!!";){
 </html>
