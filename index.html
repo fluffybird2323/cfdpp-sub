@@ -114,7 +114,10 @@ else{
 	alert(reigoncode);
 	}
 	function getDis(){
-	if(x.innerHTML==" Northern India"){
+		if(x.innerHTML==" Northern India"&((151*(position.coords.latitude)+125*(position.coords.longitude)−14273)>0) ){
+	
+	x.innerHTML += ": your life is under a constant threat from earthquakes, Landslides and floods!!!!";}
+	else if(x.innerHTML==" Northern India"){
 	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
 	else if(x.innerHTML==" North Eastern India"){
