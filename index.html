@@ -3,12 +3,10 @@
 		body {
     background-color: lightblue;
 }
-
 h1 {
     color: white;
     text-align: center;
 }
-
 p {
     font-family: verdana;
     font-size: 26px;
@@ -35,7 +33,6 @@ p {
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -44,11 +41,9 @@ p {
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
@@ -59,19 +54,15 @@ p {
 
 <p><h1>Click the button to get your Reigon.</h1></p>
 <center>
-<button class = "button" onclick="getLoc()"><h3><span>Try It Now</span></h3></button>
+<button class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
 	
 
 <p id="demo"></p>
-	
 	<div id = "a" style="display:none;">
-	<p><h1>Want to be safe????.</h1></p>
-	<a href = "https://www.wikihow.com/React-During-an-Earthquake">
-<button class = "button" ><h3><span>Click here</span></h3></button>
-	</a>
+	<p><h1>Whant to be safe????.</h1></p>
+<button class = "button" onclick="getLocation()"><h3><span>Click here</span></h3></button>
 </div>
-	</center> 
-  </body>  
+	</center>
 <script>
 var x = document.getElementById("demo");
 function getLocation() {
@@ -102,15 +93,11 @@ else{
 else{
  x.innerHTML +=" Central India"	;
 }
-if(x.innerHTML==" Northern India"){
+	if(x.innerHTML==" Northern India"){
 	
-	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
-}
-	else if(x.innerHTML=="North Eastern"){
-	 x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}	
-
-	else if(x.innerHTML=="south eastern"){
-	x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";)}
+	x.innerHTML += " An earthquake might hit you anytime!!!";}
 }
 </script>
+
+</body>
 </html>
