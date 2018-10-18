@@ -59,7 +59,7 @@ p {
 
 <p><h1>Click the button to get your Reigon.</h1></p>
 <center>
-<button class = "button" onclick="getLocation()"><h3><span>Try It Now</span></h3></button>
+<button class = "button" onclick="getLoc()"><h3><span>Try It Now</span></h3></button>
 	
 
 <p id="demo"></p>
@@ -74,7 +74,7 @@ p {
 <script>
 var x = document.getElementById("demo");
 
-function getLocation() {
+function getLoc() {
 	toggle_visibility('a');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
