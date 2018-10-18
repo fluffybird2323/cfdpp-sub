@@ -70,11 +70,11 @@ p {
 <button class = "button" ><h3><span>Click here</span></h3></button>
 	</a>
 </div>
-	</center>
-<script type = "text/javascript">
+	</center> 
+  </body>  
+<script>
 var x = document.getElementById("demo");
-
-function getLoc() {
+function getLocation() {
 	toggle_visibility('a');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -89,7 +89,6 @@ function getLoc() {
        else
           e.style.display = 'block';
    }
-
 function showPosition(position) {
 	if(position.coords.latitude>26||position.coords.latitude<21){
     x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
@@ -98,13 +97,12 @@ function showPosition(position) {
 }
 else{
 	x.innerHTML += "ern India";
-}	
 }
- else{ 
-   x.innerHTML +=" Central India"	; 
-  } 
-   
- 	if(x.innerHTML==" Northern India"){
+}
+else{
+ x.innerHTML +=" Central India"	;
+}
+if(x.innerHTML==" Northern India"){
 	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
 }
@@ -114,9 +112,6 @@ else{
 
 	else if(x.innerHTML=="south eastern"){
 	x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";)}
-  } 
-  </script> 
-  
-   </body>  
-
+}
+</script>
 </html>
