@@ -90,7 +90,6 @@ function getLocation() {
           e.style.display = 'block';
    }
 
-//by rohit
 function showPosition(position) {
 	if(position.coords.latitude>26||position.coords.latitude<21){
     x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
@@ -99,20 +98,28 @@ function showPosition(position) {
 }
 else{
 	x.innerHTML += "ern India";
+}	
 }
-}
-else{
- x.innerHTML +=" Central India"	;
-}
-
-	if(x.innerHTML==" Northern India"){
+ else{ 
+   x.innerHTML +=" Central India"	; 
+  } 
+   
+ 	if(x.innerHTML==" Northern India"){
 	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
 }
-	if(x.innerHTML=="North Eastern"){
-	 x.innerHTML+=":yor life is under a constant threat from earthquakes,flood and landslide!!!!";}
+	else if(x.innerHTML=="North Eastern"){
+	 x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}
 	}	
 
-	if(x.innerHTML=="south eastern"){
-	x.innerHTML+=":your life is under a constant threat from cyclone and flood!!!!";){
+	else if(x.innerHTML=="south eastern"){
+	x.innerHTML+=":your life is under a constant threat from cyclones and flood!!!!";)}
+  } 
+//td
+  </script> 
+  
+ 
+111  </body> 
+112  </html> 
+
 </html>
