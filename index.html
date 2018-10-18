@@ -67,7 +67,6 @@ p {
 var x = document.getElementById("demo");
 	var reigoncode = 0;
 function getLocation() {
-	debugger;
 	toggle_visibility('a');
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -114,10 +113,13 @@ else{
 			return 6;
 	alert(reigoncode);
 	}
-	function getDis(){
+	function getDis(position){
 	if(x.innerHTML==" Northern India" && (151*(position.coords.latitude)+125*(position.coords.longitude)−14273)>0 ){
 	
 	x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";}
+		else if(x.innerHTML==" Northern India"){
+		x.innerHTML += ": your life is under a constant threat from earthquakes and floods!!!!";
+		}
 	else if(x.innerHTML==" North Eastern India"){
 	 x.innerHTML+=": your life is under a constant threat from earthquakes,flood and landslide!!!!";}
 	else if(x.innerHTML==" South Eastern India"){
