@@ -67,7 +67,8 @@ p {
 var x = document.getElementById("demo");
 	var reigoncode = 0;
 function getLocation() {
-	toggle_visibility('a');
+	var a = document.getElementById("a");
+	toggle_visibility(a);
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
