@@ -84,6 +84,7 @@ function getLocation() {
           e.style.display = 'block';
    }
 function showPosition(position) {
+    alert("it may take some time");
     if(position.coords.latitude>26||position.coords.latitude<21){
     x.innerHTML +=(position.coords.latitude>26)?(" North"):(" South")   ;
         if(position.coords.longitude>85||position.coords.longitude<74){
